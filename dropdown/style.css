@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(247, 232, 214);
+}
+
+.dropdown {
+  height: 10vh;
+  background: rgb(233, 200, 130);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.products,
+.projects,
+.practice {
+  position: relative;
+}
+
+.projects ul,
+.products ul,
+.practice ul {
+  position: absolute;
+  background: rgb(233, 200, 130);
+  margin-top: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  opacity: 0;
+}
+
+.projects button:focus + ul,
+.products button:focus + ul,
+.practice button:focus + ul {
+  opacity: 1;
+}
+
+.projects li,
+.products li,
+.practice li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products li:hover,
+.projects li:hover,
+.practice li:hover {
+  background: white;
+  width: 100%;
+  color: black;
+}
+
+.dropdown li {
+  padding: 20px 0;
+}
+.projects a,
+.products a,
+.practice a,
+.home {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown button,
+.home {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown button:hover,
+.home:hover {
+  color: rgb(105, 74, 34);
+}
