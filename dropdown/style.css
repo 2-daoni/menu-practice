@@ -38,12 +38,16 @@ body {
   flex-direction: column;
   list-style: none;
   opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
 }
 
 .projects button:focus + ul,
 .products button:focus + ul,
 .practice button:focus + ul {
   opacity: 1;
+  pointer-events: all;
 }
 
 .projects li,
@@ -54,14 +58,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgb(105, 74, 34);
 }
 
-.products li:hover,
+.projects li:last-child,
+.products li:last-child,
+.practice li:last-child {
+  border: none;
+}
+
+.products li:hover + a,
 .projects li:hover,
 .practice li:hover {
-  background: white;
   width: 100%;
-  color: black;
 }
 
 .dropdown li {
@@ -89,4 +98,14 @@ body {
 .dropdown button:hover,
 .home:hover {
   color: rgb(105, 74, 34);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+  font-size: 2em;
+  color: rgb(105, 74, 34);
+  font-weight: 700;
 }

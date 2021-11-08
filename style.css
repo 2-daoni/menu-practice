@@ -49,7 +49,8 @@ header h1 {
   letter-spacing: 4px;
 }
 
-.menu li:hover:nth-child(2) {
+.menu li:hover:nth-child(2),
+.menu li:hover:nth-child(3) {
   transform: translateY(5px);
   transition: 0.5s;
 }
