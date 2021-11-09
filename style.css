@@ -45,7 +45,7 @@ header h1 {
   color: #9a9483;
 }
 
-.menu li:hover {
+.menu li:hover:nth-child(1) {
   letter-spacing: 4px;
 }
 
@@ -53,4 +53,10 @@ header h1 {
 .menu li:hover:nth-child(3) {
   transform: translateY(5px);
   transition: 0.5s;
+}
+
+.menu li:hover:nth-child(4) {
+  transform: translateY(5px);
+  transition: 0.5s;
+  letter-spacing: 4px;
 }

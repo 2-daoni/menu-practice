@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: black;
+}
+
+nav:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav .logo a {
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 50px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+  position: relative;
+}
+
+nav ul li {
+  float: left;
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 5px;
+}
+
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  font-size: 18px;
+  padding: 9px 15px;
+}
+
+nav ul li a:hover {
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 0.3s;
+}
+
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+nav ul ul li a:hover {
+  color: cyan;
+  box-shadow: none;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+
+.fa-chevron-right {
+  margin-left: 40px;
+  font-size: 15px;
+}
+
+.show,
+input {
+  display: none;
+}
+
+@media all and (max-width: 800px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul ul {
+    top: 70px;
+    position: static;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul li {
+    border-bottom: 0;
+  }
+  nav ul ul ul li {
+    position: static;
+  }
+  nav ul ul a {
+    padding-left: 60px;
+  }
+  nav ul ul ul a {
+    padding-left: 100px;
+  }
+  #other {
+    padding-left: 60px;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover {
+    color: cyan;
+  }
+  .icon {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  [id^='btn']:checked + ul {
+    display: block;
+  }
+  .fa-chevron-right {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+}
